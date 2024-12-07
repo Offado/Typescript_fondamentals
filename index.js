@@ -1,3 +1,4 @@
+// Implémentation de l'interface Véhicule
 var voiture = {
     make: "BMW",
     model: "X6 xdrive 20i",
@@ -9,7 +10,7 @@ var voiture = {
 console.log(voiture.make);
 console.log(voiture.model);
 console.log(voiture.year);
-console.log(voiture.start());
+voiture.start();
 var Voiture = /** @class */ (function () {
     function Voiture(make, model, year) {
         this.make = make;

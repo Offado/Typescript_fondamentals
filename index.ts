@@ -1,3 +1,4 @@
+// Création d'interface Véhicule
 interface Vehicule {
     make: string,
     model: string,
@@ -5,6 +6,7 @@ interface Vehicule {
     start(): void
 }
 
+// Implémentation de l'interface Véhicule
 const voiture: Vehicule = {
     make: "BMW",
     model: "X6 xdrive 20i",
@@ -14,10 +16,11 @@ const voiture: Vehicule = {
     }
 }
 
-console.log(voiture.make)
-console.log(voiture.model)
-console.log(voiture.year)
-console.log(voiture.start())
+console.log(voiture.make);
+console.log(voiture.model);
+console.log(voiture.year);
+voiture.start();
+
 
 class Voiture implements Vehicule {
 
