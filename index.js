@@ -1,16 +1,12 @@
-// Implémentation de l'interface Véhicule
 var voiture = {
     make: "BMW",
     model: "X6 xdrive 20i",
     year: 2024,
     start: function () {
-        console.log("Engine Started");
+        console.log("Enginestart");
     }
 };
-console.log(voiture.make);
-console.log(voiture.model);
-console.log(voiture.year);
-voiture.start();
+// Implémentation de la class Voiture et l'interface Vehicule
 var Voiture = /** @class */ (function () {
     function Voiture(make, model, year) {
         this.make = make;
@@ -18,7 +14,14 @@ var Voiture = /** @class */ (function () {
         this.year = year;
     }
     Voiture.prototype.start = function () {
-        console.log("Car engine Started");
+        console.log("Car engine started");
     };
     return Voiture;
 }());
+// Création de l'instance Car
+var car = new Voiture("BMW", "X6 xdrive 20i", 2024);
+// Affiche dans le terminal
+console.log(car.make);
+console.log(car.model);
+console.log(car.year);
+car.start();

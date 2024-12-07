@@ -1,42 +1,43 @@
-// Création d'interface Véhicule
+// Création de l'interface Vehicule
 interface Vehicule {
     make: string,
     model: string,
     year: number,
-    start(): void
+    start(): void;
 }
 
-// Implémentation de l'interface Véhicule
-const voiture: Vehicule = {
+const voiture: Vehicule= {
     make: "BMW",
-    model: "X6 xdrive 20i",
+    model:"X6 xdrive 20i",
     year: 2024,
     start() {
-        console.log("Engine Started")
+        console.log("Enginestart");
     }
 }
-
-console.log(voiture.make);
-console.log(voiture.model);
-console.log(voiture.year);
-voiture.start();
-
-
+// Implémentation de la class Voiture et l'interface Vehicule
 class Voiture implements Vehicule {
 
     make: string;
     model: string;
     year: number;
 
-    constructor(make: string, model: string, year: number) {
-
+    constructor(make:string, model:string, year:number) {
+        
         this.make = make;
         this.model = model;
         this.year = year;
     }
 
-    start(): void {
-        console.log("Car engine Started");
+    start() {
+        console.log("Car engine started");
     }
-    
 }
+
+// Création de l'instance Car
+const car = new Voiture("BMW", "X6 xdrive 20i", 2024)
+
+// Affiche dans le terminal
+console.log(car.make);
+console.log(car.model);
+console.log(car.year);
+car.start();
